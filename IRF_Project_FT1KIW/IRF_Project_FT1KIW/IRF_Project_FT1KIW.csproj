@@ -150,6 +150,27 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>PatientsDB.mdf</DependentUpon>
     </Content>
+    <Content Include="Pics\cat1.jpg" />
+    <Content Include="Pics\cat2.jpg" />
+    <Content Include="Pics\cat3.jpg" />
+    <Content Include="Pics\cat4.jpg" />
+    <Content Include="Pics\cat5.jpg" />
+    <Content Include="Pics\cat6.jpg" />
+    <Content Include="Pics\cat7.jpg" />
+    <Content Include="Pics\cat8.jpg" />
+    <Content Include="Pics\cow1.jpg" />
+    <Content Include="Pics\cow2.jpg" />
+    <Content Include="Pics\cow3.jpg" />
+    <Content Include="Pics\cow4.jpg" />
+    <Content Include="Pics\cow5.jpg" />
+    <Content Include="Pics\horse1.jpg" />
+    <Content Include="Pics\horse2.jpg" />
+    <Content Include="Pics\horse3.jpg" />
+    <Content Include="Pics\horse4.jpg" />
+    <Content Include="Pics\horse5.jpg" />
+    <Content Include="Pics\rabbit1.jpg" />
+    <Content Include="Pics\rabbit2.jpg" />
+    <Content Include="Pics\rabbit3.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
