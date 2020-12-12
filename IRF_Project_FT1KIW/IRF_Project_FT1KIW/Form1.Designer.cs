@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,13 +37,20 @@
             this.problemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.treatmentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.doctorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = typeof(IRF_Project_FT1KIW.ORM.Table);
             // 
             // dataGridView1
             // 
@@ -59,11 +65,11 @@
             this.treatmentDataGridViewTextBoxColumn,
             this.doctorDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.bindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 274);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 209);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(955, 152);
+            this.dataGridView1.Size = new System.Drawing.Size(955, 217);
             this.dataGridView1.TabIndex = 0;
             // 
             // idDataGridViewTextBoxColumn
@@ -122,17 +128,110 @@
             this.doctorDataGridViewTextBoxColumn.Name = "doctorDataGridViewTextBoxColumn";
             this.doctorDataGridViewTextBoxColumn.Width = 150;
             // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = typeof(IRF_Project_FT1KIW.ORM.Table);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(721, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(246, 146);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(22, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Species:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(201, 26);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 26);
+            this.textBox1.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(148, 20);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Number of patients:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(197, 66);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 20);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "label3";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(392, 18);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(81, 42);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Export";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(392, 66);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(81, 42);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Delete";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(26, 100);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 20);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Doctor:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(197, 100);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(51, 20);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "label5";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(979, 485);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -147,6 +246,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn problemDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn treatmentDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn doctorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
 
