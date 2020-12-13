@@ -23,40 +23,44 @@ namespace IRF_Project_FT1KIW
             dataGridView1.DataSource = null;
             dataGridView1.Refresh();         //enélkül errort ad
 
-
             bs.DataSource = context.Table.Local;
 
-            specieslb.DisplayMember = "Species";
+            patientslb.DisplayMember = "Name";
 
             context.Table.Load();
             bs.DataSource = context.Table.Local;
 
-            SpeciesLoad();
+            PatientsLoad();
             dgv();
         }
 
         private void dgv ()
         {
             var p = from x in context.Table
-                    where x.Species == ((Table)specieslb.SelectedItem).Species
+                    where x.Species == ((Table)patientslb.SelectedItem).Species
                     select x;
 
             dataGridView1.DataSource = p.ToList();
 
         }
 
-        private void SpeciesLoad()
+        private void PatientsLoad()
         {
-            var species = from x in context.Table
-                          where x.Species.Contains(speciestb.Text)
+            var patients = from x in context.Table
+                          where x.Name.Contains(patientstb.Text)
                           select x;
 
-            specieslb.DataSource = species.ToList();
+            patientslb.DataSource = patients.ToList();
         }
 
         private void specieslb_SelectedIndexChanged(object sender, EventArgs e)
         {
             dgv();
+        }
+
+        private void patientstb_TextChanged(object sender, EventArgs e)
+        {
+            PatientsLoad();
         }
     }
 }

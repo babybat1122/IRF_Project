@@ -38,8 +38,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.doclabel = new System.Windows.Forms.Label();
-            this.specieslb = new System.Windows.Forms.ListBox();
-            this.speciestb = new System.Windows.Forms.TextBox();
+            this.patientslb = new System.Windows.Forms.ListBox();
+            this.patientstb = new System.Windows.Forms.TextBox();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.speciesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -86,9 +86,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(8, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 20);
+            this.label1.Size = new System.Drawing.Size(71, 20);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Species:";
+            this.label1.Text = "Patients:";
             // 
             // label2
             // 
@@ -138,28 +138,29 @@
             // doclabel
             // 
             this.doclabel.AutoSize = true;
-            this.doclabel.Location = new System.Drawing.Point(345, 99);
+            this.doclabel.Location = new System.Drawing.Point(343, 99);
             this.doclabel.Name = "doclabel";
             this.doclabel.Size = new System.Drawing.Size(68, 20);
             this.doclabel.TabIndex = 9;
             this.doclabel.Text = "doclabel";
             // 
-            // specieslb
+            // patientslb
             // 
-            this.specieslb.FormattingEnabled = true;
-            this.specieslb.ItemHeight = 20;
-            this.specieslb.Location = new System.Drawing.Point(12, 76);
-            this.specieslb.Name = "specieslb";
-            this.specieslb.Size = new System.Drawing.Size(120, 124);
-            this.specieslb.TabIndex = 10;
-            this.specieslb.SelectedIndexChanged += new System.EventHandler(this.specieslb_SelectedIndexChanged);
+            this.patientslb.FormattingEnabled = true;
+            this.patientslb.ItemHeight = 20;
+            this.patientslb.Location = new System.Drawing.Point(12, 76);
+            this.patientslb.Name = "patientslb";
+            this.patientslb.Size = new System.Drawing.Size(120, 124);
+            this.patientslb.TabIndex = 10;
+            this.patientslb.SelectedIndexChanged += new System.EventHandler(this.specieslb_SelectedIndexChanged);
             // 
-            // speciestb
+            // patientstb
             // 
-            this.speciestb.Location = new System.Drawing.Point(12, 44);
-            this.speciestb.Name = "speciestb";
-            this.speciestb.Size = new System.Drawing.Size(120, 26);
-            this.speciestb.TabIndex = 11;
+            this.patientstb.Location = new System.Drawing.Point(12, 44);
+            this.patientstb.Name = "patientstb";
+            this.patientstb.Size = new System.Drawing.Size(120, 26);
+            this.patientstb.TabIndex = 11;
+            this.patientstb.TextChanged += new System.EventHandler(this.patientstb_TextChanged);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -226,8 +227,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(979, 485);
-            this.Controls.Add(this.speciestb);
-            this.Controls.Add(this.specieslb);
+            this.Controls.Add(this.patientstb);
+            this.Controls.Add(this.patientslb);
             this.Controls.Add(this.doclabel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
@@ -266,8 +267,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label doclabel;
-        private System.Windows.Forms.ListBox specieslb;
-        private System.Windows.Forms.TextBox speciestb;
+        private System.Windows.Forms.ListBox patientslb;
+        private System.Windows.Forms.TextBox patientstb;
     }
 }
 
