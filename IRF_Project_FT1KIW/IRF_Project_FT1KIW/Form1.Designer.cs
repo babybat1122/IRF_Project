@@ -33,13 +33,16 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.nbrlabel = new System.Windows.Forms.Label();
+            this.prblabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.doclabel = new System.Windows.Forms.Label();
             this.patientslb = new System.Windows.Forms.ListBox();
             this.patientstb = new System.Windows.Forms.TextBox();
+            this.bs = new System.Windows.Forms.BindingSource(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            this.agelabel = new System.Windows.Forms.Label();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.speciesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,7 +50,11 @@
             this.problemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.treatmentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.doctorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bs = new System.Windows.Forms.BindingSource(this.components);
+            this.namelabel = new System.Windows.Forms.Label();
+            this.horsetimer = new System.Windows.Forms.Timer(this.components);
+            this.rabbittimer = new System.Windows.Forms.Timer(this.components);
+            this.cattimer = new System.Windows.Forms.Timer(this.components);
+            this.cowtimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bs)).BeginInit();
@@ -66,16 +73,16 @@
             this.treatmentDataGridViewTextBoxColumn,
             this.doctorDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.bs;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 209);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 208);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(955, 217);
+            this.dataGridView1.Size = new System.Drawing.Size(955, 144);
             this.dataGridView1.TabIndex = 0;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(721, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(721, 20);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(246, 146);
             this.pictureBox1.TabIndex = 1;
@@ -93,24 +100,24 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(165, 66);
+            this.label2.Location = new System.Drawing.Point(165, 110);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 20);
+            this.label2.Size = new System.Drawing.Size(71, 20);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Number of patients:";
+            this.label2.Text = "Problem:";
             // 
-            // nbrlabel
+            // prblabel
             // 
-            this.nbrlabel.AutoSize = true;
-            this.nbrlabel.Location = new System.Drawing.Point(345, 66);
-            this.nbrlabel.Name = "nbrlabel";
-            this.nbrlabel.Size = new System.Drawing.Size(51, 20);
-            this.nbrlabel.TabIndex = 5;
-            this.nbrlabel.Text = "label3";
+            this.prblabel.AutoSize = true;
+            this.prblabel.Location = new System.Drawing.Point(273, 110);
+            this.prblabel.Name = "prblabel";
+            this.prblabel.Size = new System.Drawing.Size(65, 20);
+            this.prblabel.TabIndex = 5;
+            this.prblabel.Text = "prblabel";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(493, 44);
+            this.button1.Location = new System.Drawing.Point(520, 44);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(81, 42);
             this.button1.TabIndex = 6;
@@ -119,7 +126,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(493, 116);
+            this.button2.Location = new System.Drawing.Point(520, 110);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(81, 42);
             this.button2.TabIndex = 7;
@@ -129,7 +136,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(165, 99);
+            this.label4.Location = new System.Drawing.Point(165, 76);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 20);
             this.label4.TabIndex = 8;
@@ -138,7 +145,7 @@
             // doclabel
             // 
             this.doclabel.AutoSize = true;
-            this.doclabel.Location = new System.Drawing.Point(343, 99);
+            this.doclabel.Location = new System.Drawing.Point(273, 76);
             this.doclabel.Name = "doclabel";
             this.doclabel.Size = new System.Drawing.Size(68, 20);
             this.doclabel.TabIndex = 9;
@@ -162,13 +169,35 @@
             this.patientstb.TabIndex = 11;
             this.patientstb.TextChanged += new System.EventHandler(this.patientstb_TextChanged);
             // 
+            // bs
+            // 
+            this.bs.DataSource = typeof(IRF_Project_FT1KIW.ORM.Table);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(165, 146);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 20);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Age: ";
+            // 
+            // agelabel
+            // 
+            this.agelabel.AutoSize = true;
+            this.agelabel.Location = new System.Drawing.Point(277, 146);
+            this.agelabel.Name = "agelabel";
+            this.agelabel.Size = new System.Drawing.Size(69, 20);
+            this.agelabel.TabIndex = 13;
+            this.agelabel.Text = "agelabel";
+            // 
             // idDataGridViewTextBoxColumn
             // 
-            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
             this.idDataGridViewTextBoxColumn.HeaderText = "Id";
             this.idDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Width = 40;
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -192,7 +221,7 @@
             this.ageDataGridViewTextBoxColumn.HeaderText = "Age";
             this.ageDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
-            this.ageDataGridViewTextBoxColumn.Width = 150;
+            this.ageDataGridViewTextBoxColumn.Width = 40;
             // 
             // problemDataGridViewTextBoxColumn
             // 
@@ -218,22 +247,30 @@
             this.doctorDataGridViewTextBoxColumn.Name = "doctorDataGridViewTextBoxColumn";
             this.doctorDataGridViewTextBoxColumn.Width = 150;
             // 
-            // bs
+            // namelabel
             // 
-            this.bs.DataSource = typeof(IRF_Project_FT1KIW.ORM.Table);
+            this.namelabel.AutoSize = true;
+            this.namelabel.Location = new System.Drawing.Point(224, 33);
+            this.namelabel.Name = "namelabel";
+            this.namelabel.Size = new System.Drawing.Size(51, 20);
+            this.namelabel.TabIndex = 14;
+            this.namelabel.Text = "label5";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(979, 485);
+            this.ClientSize = new System.Drawing.Size(979, 364);
+            this.Controls.Add(this.namelabel);
+            this.Controls.Add(this.agelabel);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.patientstb);
             this.Controls.Add(this.patientslb);
             this.Controls.Add(this.doclabel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.nbrlabel);
+            this.Controls.Add(this.prblabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -252,6 +289,18 @@
 
         private System.Windows.Forms.BindingSource bs;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label prblabel;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label doclabel;
+        private System.Windows.Forms.ListBox patientslb;
+        private System.Windows.Forms.TextBox patientstb;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label agelabel;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn speciesDataGridViewTextBoxColumn;
@@ -259,16 +308,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn problemDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn treatmentDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn doctorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label nbrlabel;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label doclabel;
-        private System.Windows.Forms.ListBox patientslb;
-        private System.Windows.Forms.TextBox patientstb;
+        private System.Windows.Forms.Label namelabel;
+        private System.Windows.Forms.Timer horsetimer;
+        private System.Windows.Forms.Timer rabbittimer;
+        private System.Windows.Forms.Timer cattimer;
+        private System.Windows.Forms.Timer cowtimer;
     }
 }
 
