@@ -56,11 +56,26 @@ namespace IRF_Project_FT1KIW
         private void specieslb_SelectedIndexChanged(object sender, EventArgs e)
         {
             dgv();
+            Data();
         }
 
         private void patientstb_TextChanged(object sender, EventArgs e)
         {
             PatientsLoad();
+        }
+
+        private void Data()
+        {
+            spcslabel.Text = ((Table)patientslb.SelectedItem).Species;
+            doclabel.Text = ((Table)patientslb.SelectedItem).Doctor;
+            prblabel.Text = ((Table)patientslb.SelectedItem).Problem;
+            agelabel.Text = ((Table)patientslb.SelectedItem).Age.ToString();
+            namelabel.Text = ((Table)patientslb.SelectedItem).Name;
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
