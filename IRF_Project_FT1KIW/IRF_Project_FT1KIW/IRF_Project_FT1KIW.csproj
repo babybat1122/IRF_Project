@@ -110,6 +110,12 @@
     <Compile Include="UCs\DocUC.Designer.cs">
       <DependentUpon>DocUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCs\SpecUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCs\SpecUC.Designer.cs">
+      <DependentUpon>SpecUC.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ExportForm.resx">
       <DependentUpon>ExportForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +133,9 @@
     </Compile>
     <EmbeddedResource Include="UCs\DocUC.resx">
       <DependentUpon>DocUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCs\SpecUC.resx">
+      <DependentUpon>SpecUC.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="ORM\AdoModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

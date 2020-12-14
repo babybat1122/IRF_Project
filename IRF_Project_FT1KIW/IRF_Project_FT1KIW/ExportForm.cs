@@ -30,9 +30,12 @@ namespace IRF_Project_FT1KIW
             docuc.Dock = DockStyle.Fill;
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            
+            panel1.Controls.Clear();
+            SpecUC specuc = new SpecUC();
+            panel1.Controls.Add(specuc);
+            specuc.Dock = DockStyle.Fill;
         }
     }
 }
