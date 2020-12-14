@@ -16,6 +16,8 @@ namespace IRF_Project_FT1KIW
     {
         PatientsDBEntities context = new PatientsDBEntities();
 
+        List<Table> pats;
+
         public Form1()
         {
             InitializeComponent();
@@ -40,6 +42,8 @@ namespace IRF_Project_FT1KIW
             horsetimer.Interval = 2000;
             cattimer.Interval = 2000;
             cowtimer.Interval = 2000;
+
+            
         }
 
         private void dgv ()
@@ -58,7 +62,9 @@ namespace IRF_Project_FT1KIW
                           where x.Name.Contains(patientstb.Text)
                           select x;
 
-            patientslb.DataSource = patients.ToList();
+            pats = patients.ToList();
+
+            patientslb.DataSource = pats;
         }
 
         private void specieslb_SelectedIndexChanged(object sender, EventArgs e)
@@ -80,16 +86,6 @@ namespace IRF_Project_FT1KIW
             prblabel.Text = ((Table)patientslb.SelectedItem).Problem;
             agelabel.Text = ((Table)patientslb.SelectedItem).Age.ToString();
             namelabel.Text = ((Table)patientslb.SelectedItem).Name;
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void Pics()
@@ -194,6 +190,18 @@ namespace IRF_Project_FT1KIW
         {
             ExportForm ef = new ExportForm();
             ef.Show();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            var delpatient = from x in context.Table
+                           where x.Name == patientslb.SelectedItem.ToString()
+                           select x;
+
+            pats.Remove((Table)delpatient);
+
+            PatientsLoad();
+            dgv();
         }
     }
 }

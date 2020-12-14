@@ -50,7 +50,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.bs = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.speciesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,6 +57,7 @@
             this.problemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.treatmentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.doctorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bs = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bs)).BeginInit();
@@ -217,7 +217,7 @@
             this.spcslabel.Size = new System.Drawing.Size(75, 20);
             this.spcslabel.TabIndex = 16;
             this.spcslabel.Text = "spcslabel";
-            this.spcslabel.Click += new System.EventHandler(this.label6_Click);
+
             // 
             // label5
             // 
@@ -246,10 +246,7 @@
             this.button2.TabIndex = 19;
             this.button2.Text = "Delete";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // bs
-            // 
-            this.bs.DataSource = typeof(IRF_Project_FT1KIW.ORM.Table);
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -265,6 +262,7 @@
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 150;
             // 
             // speciesDataGridViewTextBoxColumn
             // 
@@ -305,6 +303,10 @@
             this.doctorDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.doctorDataGridViewTextBoxColumn.Name = "doctorDataGridViewTextBoxColumn";
             this.doctorDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // bs
+            // 
+            this.bs.DataSource = typeof(IRF_Project_FT1KIW.ORM.Table);
             // 
             // Form1
             // 
