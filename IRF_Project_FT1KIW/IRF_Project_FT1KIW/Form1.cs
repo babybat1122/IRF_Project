@@ -94,18 +94,20 @@ namespace IRF_Project_FT1KIW
 
         private void Pics()
         {
+            // addott fajtához a megfelelő timer elindítása, többi leállítása
+
             if (((Table)patientslb.SelectedItem).Species == "horse")
             {
-                MessageBox.Show("horsetimer");
-                
+                //MessageBox.Show("horsetimer");
                 horsetimer.Start();
+
                 cattimer.Stop();
                 cowtimer.Stop();
                 rabbittimer.Stop();
             }
             if (((Table)patientslb.SelectedItem).Species == "cat")
             {
-                MessageBox.Show("cattimer");
+                //MessageBox.Show("cattimer");
                 cattimer.Start();
 
                 horsetimer.Stop();
@@ -114,7 +116,7 @@ namespace IRF_Project_FT1KIW
             }
             if (((Table)patientslb.SelectedItem).Species == "rabbit")
             {
-                MessageBox.Show("rabbittimer");
+                //MessageBox.Show("rabbittimer");
                 rabbittimer.Start();
 
                 cattimer.Stop();
@@ -123,7 +125,7 @@ namespace IRF_Project_FT1KIW
             }
             if (((Table)patientslb.SelectedItem).Species == "cow")
             {
-                MessageBox.Show("cowtimer");
+                //MessageBox.Show("cowtimer");
                 cowtimer.Start();
 
                 cattimer.Stop();
