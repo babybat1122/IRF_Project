@@ -49,6 +49,7 @@
             this.cowtimer = new System.Windows.Forms.Timer(this.components);
             this.labelsok = new System.Windows.Forms.Label();
             this.spcslabel = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.speciesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,7 +58,6 @@
             this.treatmentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.doctorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bs = new System.Windows.Forms.BindingSource(this.components);
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bs)).BeginInit();
@@ -76,7 +76,7 @@
             this.treatmentDataGridViewTextBoxColumn,
             this.doctorDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.bs;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 256);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 304);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
@@ -85,9 +85,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(721, 20);
+            this.pictureBox1.Location = new System.Drawing.Point(572, 20);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(246, 146);
+            this.pictureBox1.Size = new System.Drawing.Size(371, 217);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -120,7 +121,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(520, 44);
+            this.button1.Location = new System.Drawing.Point(446, 195);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(81, 42);
             this.button1.TabIndex = 6;
@@ -129,12 +130,13 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(520, 110);
+            this.button2.Location = new System.Drawing.Point(446, 76);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(81, 42);
             this.button2.TabIndex = 7;
             this.button2.Text = "Delete";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label4
             // 
@@ -193,11 +195,29 @@
             // namelabel
             // 
             this.namelabel.AutoSize = true;
-            this.namelabel.Location = new System.Drawing.Point(260, 18);
+            this.namelabel.ForeColor = System.Drawing.Color.Maroon;
+            this.namelabel.Location = new System.Drawing.Point(198, 20);
             this.namelabel.Name = "namelabel";
             this.namelabel.Size = new System.Drawing.Size(51, 20);
             this.namelabel.TabIndex = 14;
             this.namelabel.Text = "label5";
+            // 
+            // horsetimer
+            // 
+            this.horsetimer.Tick += new System.EventHandler(this.horsetimer_Tick);
+            // 
+            // rabbittimer
+            // 
+            this.rabbittimer.Interval = 5000;
+            this.rabbittimer.Tick += new System.EventHandler(this.rabbittimer_Tick);
+            // 
+            // cattimer
+            // 
+            this.cattimer.Tick += new System.EventHandler(this.cattimer_Tick);
+            // 
+            // cowtimer
+            // 
+            this.cowtimer.Tick += new System.EventHandler(this.cowtimer_Tick);
             // 
             // labelsok
             // 
@@ -217,6 +237,15 @@
             this.spcslabel.TabIndex = 16;
             this.spcslabel.Text = "spcslabel";
             this.spcslabel.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(8, 264);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(260, 20);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "Other patients of the same species:";
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -278,20 +307,11 @@
             // 
             this.bs.DataSource = typeof(IRF_Project_FT1KIW.ORM.Table);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 217);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(278, 20);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "Other patients from the same species:";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(979, 422);
+            this.ClientSize = new System.Drawing.Size(979, 460);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.spcslabel);
             this.Controls.Add(this.labelsok);

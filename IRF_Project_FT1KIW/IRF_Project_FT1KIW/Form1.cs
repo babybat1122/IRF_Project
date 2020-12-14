@@ -32,6 +32,14 @@ namespace IRF_Project_FT1KIW
 
             PatientsLoad();
             dgv();
+            Pics();
+
+            namelabel.Font = new Font("Calibri", 15, FontStyle.Bold);
+
+            rabbittimer.Interval = 2000;
+            horsetimer.Interval = 2000;
+            cattimer.Interval = 2000;
+            cowtimer.Interval = 2000;
         }
 
         private void dgv ()
@@ -44,7 +52,7 @@ namespace IRF_Project_FT1KIW
 
         }
 
-        private void PatientsLoad()
+        public void PatientsLoad()
         {
             var patients = from x in context.Table
                           where x.Name.Contains(patientstb.Text)
@@ -57,6 +65,7 @@ namespace IRF_Project_FT1KIW
         {
             dgv();
             Data();
+            Pics();
         }
 
         private void patientstb_TextChanged(object sender, EventArgs e)
@@ -76,6 +85,107 @@ namespace IRF_Project_FT1KIW
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Pics()
+        {
+            if (((Table)patientslb.SelectedItem).Species == "horse")
+            {
+                MessageBox.Show("horsetimer");
+                
+                horsetimer.Start();
+                cattimer.Stop();
+                cowtimer.Stop();
+                rabbittimer.Stop();
+            }
+            if (((Table)patientslb.SelectedItem).Species == "cat")
+            {
+                MessageBox.Show("cattimer");
+                cattimer.Start();
+
+                horsetimer.Stop();
+                cowtimer.Stop();
+                rabbittimer.Stop();
+            }
+            if (((Table)patientslb.SelectedItem).Species == "rabbit")
+            {
+                MessageBox.Show("rabbittimer");
+                rabbittimer.Start();
+
+                cattimer.Stop();
+                cowtimer.Stop();
+                horsetimer.Stop();
+            }
+            if (((Table)patientslb.SelectedItem).Species == "cow")
+            {
+                MessageBox.Show("cowtimer");
+                cowtimer.Start();
+
+                cattimer.Stop();
+                horsetimer.Stop();
+                rabbittimer.Stop();
+            }
+        }
+
+        int h = 1;
+
+        private void horsetimer_Tick(object sender, EventArgs e)
+        {
+            if (h == 6)
+            {
+                h = 1;
+            }
+
+            pictureBox1.Image = Image.FromFile(@"C:\Users\vicah\source\repos\IRF_Project\IRF_Project_FT1KIW\IRF_Project_FT1KIW\Pics\horse" + h + ".jpg");
+
+            h++;
+        }
+
+        int r = 1;
+
+        private void rabbittimer_Tick(object sender, EventArgs e)
+        {
+            if (r == 4)
+            {
+                r = 1;
+            }            
+
+            pictureBox1.Image = Image.FromFile(@"C:\Users\vicah\source\repos\IRF_Project\IRF_Project_FT1KIW\IRF_Project_FT1KIW\Pics\rabbit" + r + ".jpg");
+
+            r++;
+        }
+
+        int cat = 1;
+
+        private void cattimer_Tick(object sender, EventArgs e)
+        {
+            if (cat == 9)
+            {
+                cat = 1;
+            }
+
+            pictureBox1.Image = Image.FromFile(@"C:\Users\vicah\source\repos\IRF_Project\IRF_Project_FT1KIW\IRF_Project_FT1KIW\Pics\cat" + cat + ".jpg");
+
+            cat++;
+        }
+
+        int cow = 1;
+
+        private void cowtimer_Tick(object sender, EventArgs e)
+        {
+            if (cow == 6)
+            {
+                cow = 1;
+            }
+
+            pictureBox1.Image = Image.FromFile(@"C:\Users\vicah\source\repos\IRF_Project\IRF_Project_FT1KIW\IRF_Project_FT1KIW\Pics\cow" + cow + ".jpg");
+
+            cow++;
         }
     }
 }
