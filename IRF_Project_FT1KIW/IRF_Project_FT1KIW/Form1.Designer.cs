@@ -48,6 +48,8 @@
             this.labelsok = new System.Windows.Forms.Label();
             this.spcslabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.speciesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,8 +58,6 @@
             this.treatmentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.doctorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bs = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bs)).BeginInit();
@@ -80,7 +80,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(894, 144);
+            this.dataGridView1.Size = new System.Drawing.Size(894, 178);
             this.dataGridView1.TabIndex = 0;
             // 
             // pictureBox1
@@ -228,6 +228,25 @@
             this.label5.TabIndex = 17;
             this.label5.Text = "Other patients of the same species:";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(925, 173);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(138, 60);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Data Export";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(925, 264);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(138, 61);
+            this.button2.TabIndex = 19;
+            this.button2.Text = "Delete";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
@@ -288,29 +307,11 @@
             // 
             this.bs.DataSource = typeof(IRF_Project_FT1KIW.ORM.Table);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(925, 153);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 60);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Data Export";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(925, 237);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(138, 61);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1075, 460);
+            this.ClientSize = new System.Drawing.Size(1075, 494);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);

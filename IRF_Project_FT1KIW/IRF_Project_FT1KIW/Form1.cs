@@ -189,5 +189,11 @@ namespace IRF_Project_FT1KIW
 
             cow++;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ExportForm ef = new ExportForm();
+            ef.Show();
+        }
     }
 }
