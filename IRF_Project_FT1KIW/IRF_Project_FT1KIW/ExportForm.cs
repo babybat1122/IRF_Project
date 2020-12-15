@@ -19,7 +19,9 @@ namespace IRF_Project_FT1KIW
         {
             InitializeComponent();
 
+            pictureBox2.Image = Image.FromFile(@"C:\Users\vicah\source\repos\IRF_Project\IRF_Project_FT1KIW\IRF_Project_FT1KIW\Icons\stethoscope.png");
 
+            pictureBox1.Image = Image.FromFile(@"C:\Users\vicah\source\repos\IRF_Project\IRF_Project_FT1KIW\IRF_Project_FT1KIW\Icons\pawprint.png");
         }
 
         private void button1_Click(object sender, EventArgs e)

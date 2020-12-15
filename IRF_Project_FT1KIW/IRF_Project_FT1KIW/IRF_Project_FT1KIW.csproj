@@ -130,6 +130,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UCs\DocUC.resx">
       <DependentUpon>DocUC.cs</DependentUpon>
@@ -160,6 +161,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Icons\pawprint.png" />
+    <Content Include="Icons\stethoscope.png" />
     <Content Include="ORM\AdoModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AdoModel.Context.cs</LastGenOutput>
