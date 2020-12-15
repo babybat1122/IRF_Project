@@ -30,6 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.speciesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.problemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.treatmentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.doctorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bs = new System.Windows.Forms.BindingSource(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,17 +58,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.speciesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.problemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.treatmentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.doctorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bs = new System.Windows.Forms.BindingSource(this.components);
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -82,6 +83,66 @@
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(894, 178);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Width = 30;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // speciesDataGridViewTextBoxColumn
+            // 
+            this.speciesDataGridViewTextBoxColumn.DataPropertyName = "Species";
+            this.speciesDataGridViewTextBoxColumn.HeaderText = "Species";
+            this.speciesDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.speciesDataGridViewTextBoxColumn.Name = "speciesDataGridViewTextBoxColumn";
+            this.speciesDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // ageDataGridViewTextBoxColumn
+            // 
+            this.ageDataGridViewTextBoxColumn.DataPropertyName = "Age";
+            this.ageDataGridViewTextBoxColumn.HeaderText = "Age";
+            this.ageDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
+            this.ageDataGridViewTextBoxColumn.Width = 30;
+            // 
+            // problemDataGridViewTextBoxColumn
+            // 
+            this.problemDataGridViewTextBoxColumn.DataPropertyName = "Problem";
+            this.problemDataGridViewTextBoxColumn.HeaderText = "Problem";
+            this.problemDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.problemDataGridViewTextBoxColumn.Name = "problemDataGridViewTextBoxColumn";
+            this.problemDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // treatmentDataGridViewTextBoxColumn
+            // 
+            this.treatmentDataGridViewTextBoxColumn.DataPropertyName = "Treatment";
+            this.treatmentDataGridViewTextBoxColumn.HeaderText = "Treatment";
+            this.treatmentDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.treatmentDataGridViewTextBoxColumn.Name = "treatmentDataGridViewTextBoxColumn";
+            this.treatmentDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // doctorDataGridViewTextBoxColumn
+            // 
+            this.doctorDataGridViewTextBoxColumn.DataPropertyName = "Doctor";
+            this.doctorDataGridViewTextBoxColumn.HeaderText = "Doctor";
+            this.doctorDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.doctorDataGridViewTextBoxColumn.Name = "doctorDataGridViewTextBoxColumn";
+            this.doctorDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // bs
+            // 
+            this.bs.DataSource = typeof(IRF_Project_FT1KIW.ORM.Table);
             // 
             // pictureBox1
             // 
@@ -217,7 +278,6 @@
             this.spcslabel.Size = new System.Drawing.Size(75, 20);
             this.spcslabel.TabIndex = 16;
             this.spcslabel.Text = "spcslabel";
-
             // 
             // label5
             // 
@@ -230,7 +290,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(925, 173);
+            this.button1.Location = new System.Drawing.Point(950, 140);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(138, 60);
             this.button1.TabIndex = 18;
@@ -240,7 +300,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(925, 264);
+            this.button2.Location = new System.Drawing.Point(950, 404);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(138, 61);
             this.button2.TabIndex = 19;
@@ -248,71 +308,21 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
-            // idDataGridViewTextBoxColumn
+            // label6
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Width = 30;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // speciesDataGridViewTextBoxColumn
-            // 
-            this.speciesDataGridViewTextBoxColumn.DataPropertyName = "Species";
-            this.speciesDataGridViewTextBoxColumn.HeaderText = "Species";
-            this.speciesDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.speciesDataGridViewTextBoxColumn.Name = "speciesDataGridViewTextBoxColumn";
-            this.speciesDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // ageDataGridViewTextBoxColumn
-            // 
-            this.ageDataGridViewTextBoxColumn.DataPropertyName = "Age";
-            this.ageDataGridViewTextBoxColumn.HeaderText = "Age";
-            this.ageDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
-            this.ageDataGridViewTextBoxColumn.Width = 30;
-            // 
-            // problemDataGridViewTextBoxColumn
-            // 
-            this.problemDataGridViewTextBoxColumn.DataPropertyName = "Problem";
-            this.problemDataGridViewTextBoxColumn.HeaderText = "Problem";
-            this.problemDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.problemDataGridViewTextBoxColumn.Name = "problemDataGridViewTextBoxColumn";
-            this.problemDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // treatmentDataGridViewTextBoxColumn
-            // 
-            this.treatmentDataGridViewTextBoxColumn.DataPropertyName = "Treatment";
-            this.treatmentDataGridViewTextBoxColumn.HeaderText = "Treatment";
-            this.treatmentDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.treatmentDataGridViewTextBoxColumn.Name = "treatmentDataGridViewTextBoxColumn";
-            this.treatmentDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // doctorDataGridViewTextBoxColumn
-            // 
-            this.doctorDataGridViewTextBoxColumn.DataPropertyName = "Doctor";
-            this.doctorDataGridViewTextBoxColumn.HeaderText = "Doctor";
-            this.doctorDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.doctorDataGridViewTextBoxColumn.Name = "doctorDataGridViewTextBoxColumn";
-            this.doctorDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // bs
-            // 
-            this.bs.DataSource = typeof(IRF_Project_FT1KIW.ORM.Table);
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(925, 381);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(184, 20);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Delete all of this species:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1075, 494);
+            this.ClientSize = new System.Drawing.Size(1113, 494);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
@@ -333,8 +343,8 @@
             this.Name = "Form1";
             this.Text = "Other patients from the same species:";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -371,6 +381,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn problemDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn treatmentDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn doctorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label6;
     }
 }
 

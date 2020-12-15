@@ -87,14 +87,14 @@
             // 
             this.panel1.Location = new System.Drawing.Point(279, 25);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(706, 367);
+            this.panel1.Size = new System.Drawing.Size(706, 398);
             this.panel1.TabIndex = 5;
             // 
             // ExportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(997, 409);
+            this.ClientSize = new System.Drawing.Size(997, 454);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);

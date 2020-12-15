@@ -16,8 +16,6 @@ namespace IRF_Project_FT1KIW
     {
         PatientsDBEntities context = new PatientsDBEntities();
 
-        List<Table> pats;
-
         public Form1()
         {
             InitializeComponent();
@@ -62,9 +60,7 @@ namespace IRF_Project_FT1KIW
                           where x.Name.Contains(patientstb.Text)
                           select x;
 
-            pats = patients.ToList();
-
-            patientslb.DataSource = pats;
+            patientslb.DataSource = patients.ToList();
         }
 
         private void specieslb_SelectedIndexChanged(object sender, EventArgs e)
@@ -119,7 +115,7 @@ namespace IRF_Project_FT1KIW
                 cowtimer.Stop();
                 horsetimer.Stop();
             }
-            if (((Table)patientslb.SelectedItem).Species == "cow")
+            else if (((Table)patientslb.SelectedItem).Species == "cow")
             {
                 //MessageBox.Show("cowtimer");
                 cowtimer.Start();
@@ -192,13 +188,29 @@ namespace IRF_Project_FT1KIW
             ef.Show();
         }
 
+
         private void button2_Click_1(object sender, EventArgs e)
         {
-            var delpatient = from x in context.Table
-                           where x.Name == patientslb.SelectedItem.ToString()
-                           select x;
+            string spec = ((Table)patientslb.SelectedItem).Species.ToString();
 
-            pats.Remove((Table)delpatient);
+            List<Table> delpatients;
+
+            delpatients = (from x in context.Table
+                           where x.Species == spec
+                          select x).ToList();
+
+            //MessageBox.Show(delpatients.Count.ToString());
+
+            foreach (var item in context.Table)
+            {
+                if (delpatients.Contains(item))
+                {
+                    //MessageBox.Show("van ilyen");
+                    context.Table.Remove(item);
+                }
+            }
+
+            context.SaveChanges();
 
             PatientsLoad();
             dgv();
