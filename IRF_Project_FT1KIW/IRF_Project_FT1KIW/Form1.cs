@@ -23,8 +23,6 @@ namespace IRF_Project_FT1KIW
             dataGridView1.DataSource = null;
             dataGridView1.Refresh();         //enélkül errort ad
 
-            bs.DataSource = context.Table.Local;
-
             patientslb.DisplayMember = "Name";
 
             context.Table.Load();
@@ -40,8 +38,6 @@ namespace IRF_Project_FT1KIW
             horsetimer.Interval = 2000;
             cattimer.Interval = 2000;
             cowtimer.Interval = 2000;
-
-            
         }
 
         private void dgv ()
