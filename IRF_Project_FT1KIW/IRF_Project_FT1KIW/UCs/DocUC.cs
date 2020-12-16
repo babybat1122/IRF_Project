@@ -31,8 +31,6 @@ namespace IRF_Project_FT1KIW.UCs
             DGs dataGridView1 = new DGs();
 
             dgv();
-
-
         }
 
         private void dgv()

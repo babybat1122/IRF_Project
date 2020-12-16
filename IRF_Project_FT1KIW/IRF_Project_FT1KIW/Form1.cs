@@ -59,18 +59,6 @@ namespace IRF_Project_FT1KIW
             patientslb.DataSource = patients.ToList();
         }
 
-        private void specieslb_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            dgv();
-            Data();
-            Pics();
-        }
-
-        private void patientstb_TextChanged(object sender, EventArgs e)
-        {
-            PatientsLoad();
-        }
-
         private void Data()
         {
             spcslabel.Text = ((Table)patientslb.SelectedItem).Species;
@@ -120,6 +108,13 @@ namespace IRF_Project_FT1KIW
                 horsetimer.Stop();
                 rabbittimer.Stop();
             }
+        }
+
+        private void specieslb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dgv();
+            Data();
+            Pics();
         }
 
         int h = 1;
@@ -178,12 +173,16 @@ namespace IRF_Project_FT1KIW
             cow++;
         }
 
+        private void patientstb_TextChanged(object sender, EventArgs e)
+        {
+            PatientsLoad();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             ExportForm ef = new ExportForm();
             ef.Show();
         }
-
 
         private void button2_Click_1(object sender, EventArgs e)
         {
