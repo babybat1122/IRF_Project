@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace IRF_Project_FT1KIW
 {
-    public partial class ExportForm : Form
+    public partial class ExportForm : BasicForm
     {
         public ExportForm()
         {

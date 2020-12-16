@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.speclb = new System.Windows.Forms.ListBox();
-            this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.problemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.treatmentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.doctorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.speclb = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -65,26 +65,12 @@
             this.treatmentDataGridViewTextBoxColumn,
             this.doctorDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.tableBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 110);
+            this.dataGridView1.Location = new System.Drawing.Point(14, 122);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(672, 261);
             this.dataGridView1.TabIndex = 5;
-            // 
-            // speclb
-            // 
-            this.speclb.FormattingEnabled = true;
-            this.speclb.ItemHeight = 20;
-            this.speclb.Location = new System.Drawing.Point(14, 18);
-            this.speclb.Name = "speclb";
-            this.speclb.Size = new System.Drawing.Size(201, 84);
-            this.speclb.TabIndex = 4;
-            this.speclb.SelectedIndexChanged += new System.EventHandler(this.speclb_SelectedIndexChanged);
-            // 
-            // tableBindingSource
-            // 
-            this.tableBindingSource.DataSource = typeof(IRF_Project_FT1KIW.ORM.Table);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -100,6 +86,7 @@
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 150;
             // 
             // ageDataGridViewTextBoxColumn
             // 
@@ -115,6 +102,7 @@
             this.problemDataGridViewTextBoxColumn.HeaderText = "Problem";
             this.problemDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.problemDataGridViewTextBoxColumn.Name = "problemDataGridViewTextBoxColumn";
+            this.problemDataGridViewTextBoxColumn.Width = 150;
             // 
             // treatmentDataGridViewTextBoxColumn
             // 
@@ -122,6 +110,7 @@
             this.treatmentDataGridViewTextBoxColumn.HeaderText = "Treatment";
             this.treatmentDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.treatmentDataGridViewTextBoxColumn.Name = "treatmentDataGridViewTextBoxColumn";
+            this.treatmentDataGridViewTextBoxColumn.Width = 150;
             // 
             // doctorDataGridViewTextBoxColumn
             // 
@@ -129,6 +118,21 @@
             this.doctorDataGridViewTextBoxColumn.HeaderText = "Doctor";
             this.doctorDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.doctorDataGridViewTextBoxColumn.Name = "doctorDataGridViewTextBoxColumn";
+            this.doctorDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // tableBindingSource
+            // 
+            this.tableBindingSource.DataSource = typeof(IRF_Project_FT1KIW.ORM.Table);
+            // 
+            // speclb
+            // 
+            this.speclb.FormattingEnabled = true;
+            this.speclb.ItemHeight = 20;
+            this.speclb.Location = new System.Drawing.Point(14, 18);
+            this.speclb.Name = "speclb";
+            this.speclb.Size = new System.Drawing.Size(201, 84);
+            this.speclb.TabIndex = 4;
+            this.speclb.SelectedIndexChanged += new System.EventHandler(this.speclb_SelectedIndexChanged);
             // 
             // SpecUC
             // 
@@ -138,7 +142,6 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.speclb);
             this.Name = "SpecUC";
-            this.Size = new System.Drawing.Size(701, 388);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).EndInit();
             this.ResumeLayout(false);

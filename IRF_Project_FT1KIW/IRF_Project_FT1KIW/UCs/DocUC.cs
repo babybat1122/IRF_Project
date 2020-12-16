@@ -12,7 +12,7 @@ using System.IO;
 
 namespace IRF_Project_FT1KIW.UCs
 {
-    public partial class DocUC : UserControl
+    public partial class DocUC : UCClass
     {
         PatientsDBEntities context = new PatientsDBEntities();
 
@@ -28,7 +28,11 @@ namespace IRF_Project_FT1KIW.UCs
 
             doclb.DataSource = names;
 
+            DGs dataGridView1 = new DGs();
+
             dgv();
+
+
         }
 
         private void dgv()

@@ -47,7 +47,7 @@
             // 
             this.doclb.FormattingEnabled = true;
             this.doclb.ItemHeight = 20;
-            this.doclb.Location = new System.Drawing.Point(18, 17);
+            this.doclb.Location = new System.Drawing.Point(18, 34);
             this.doclb.Name = "doclb";
             this.doclb.Size = new System.Drawing.Size(201, 44);
             this.doclb.TabIndex = 1;
@@ -65,7 +65,7 @@
             this.problemDataGridViewTextBoxColumn,
             this.treatmentDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.tableBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(18, 72);
+            this.dataGridView1.Location = new System.Drawing.Point(18, 124);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
@@ -126,7 +126,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(579, 17);
+            this.button1.Location = new System.Drawing.Point(567, 34);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 44);
             this.button1.TabIndex = 3;
@@ -142,7 +142,6 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.doclb);
             this.Name = "DocUC";
-            this.Size = new System.Drawing.Size(710, 350);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).EndInit();
             this.ResumeLayout(false);

@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace IRF_Project_FT1KIW
 {
-    public partial class Form1 : Form
+    public partial class Form1 : BasicForm
     {
         PatientsDBEntities context = new PatientsDBEntities();
 

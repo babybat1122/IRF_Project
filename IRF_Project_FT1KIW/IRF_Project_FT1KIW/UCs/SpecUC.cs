@@ -12,7 +12,7 @@ using IRF_Project_FT1KIW.ORM;
 
 namespace IRF_Project_FT1KIW.UCs
 {
-    public partial class SpecUC : UserControl
+    public partial class SpecUC : UCClass
     {
         PatientsDBEntities context = new PatientsDBEntities();
 
@@ -29,6 +29,8 @@ namespace IRF_Project_FT1KIW.UCs
             };
 
             speclb.DataSource = species;
+
+            DGs dataGridView1 = new DGs();
 
             dgv();
         }
